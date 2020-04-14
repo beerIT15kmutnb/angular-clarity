@@ -6,6 +6,7 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginService } from './login.service';
 // import { LoginService } from './login.service';
 // import { DeviceDetectorModule } from 'ngx-device-detector';
 
@@ -19,6 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
     // DeviceDetectorModule.forRoot()
   ],
   declarations: [LoginComponent],
-  // providers: [LoginService]
+  providers: [LoginService]
 })
 export class LoginModule { }

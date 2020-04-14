@@ -37,9 +37,9 @@ export class LoginComponent implements OnInit {
         await this.remember();
         const data: any = await this.loginService.login(this.username, this.password);
         if (data.ok) {
-          if (data.rows) {
+          if (data.token) {
             sessionStorage.setItem('token', data.token);
-            this.route.navigate(['/material']);
+            this.route.navigate(['/main']);
             // if (data.rows.user_type === 'SUPER_ADMIN') {
 
             // } else if (data.rows.user_type === 'SUB_ADMIN') {

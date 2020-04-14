@@ -13,7 +13,7 @@ export class LoginService {
       username,
       password
     };
-    const url = `${this.url}/login/check`;
+    const url = `${this.url}/login`;
     return this.http.post(url, params).toPromise();
   }
 
