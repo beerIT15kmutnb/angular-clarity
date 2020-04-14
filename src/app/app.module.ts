@@ -3,16 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ClarityModule } from '@clr/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccessDeniedComponent } from './access-denied/access-denied.component';
+import { LoginModule } from './login/login.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent,
+    AccessDeniedComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ClarityModule,
+    BrowserAnimationsModule,
+    LoginModule,
+
   ],
-  providers: [],
+  providers: [   { provide: 'API_URL', useValue: environment.apiUrl },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
